@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Star Wars</title>
+</head>
+<body>
+    <h1>Filtered Star Wars</h1>
+    <p>Manufacturer: {{ selected_manufacturer }}</p>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Manufacturer</th>
+            <th>Passengers</th>
+            <th>Created</th>
+            <th>URL</th>
+        </tr>
+        {% for starwars in starwars_data %}
+            <tr>
+                <td>{{ starwars[0] }}</td>
+                <td>{{ starwars[1] }}</td>
+                <td>{{ starwars[2] }}</td>
+                <td>{{ starwars[3] }}</td>
+                <td>{{ starwars[4] }}</td>
+                <td>{{ starwars[5] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</
